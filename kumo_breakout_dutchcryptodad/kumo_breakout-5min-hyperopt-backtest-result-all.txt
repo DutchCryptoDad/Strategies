@@ -1,0 +1,817 @@
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20190101-20211231
+2022-10-08 13:31:06,631 - freqtrade.configuration.load_config - INFO - Using config: user_data/backtest-config.json ...
+2022-10-08 13:31:06,652 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-10-08 13:31:06,652 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2022-10-08 13:31:06,653 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2022-10-08 13:31:06,653 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20190101-20211231 ...
+2022-10-08 13:31:06,653 - freqtrade.configuration.configuration - INFO - Using user-data directory: /opt/freqtrade/user_data ...
+2022-10-08 13:31:06,656 - freqtrade.configuration.configuration - INFO - Using data directory: /opt/freqtrade/user_data/data/binance ...
+2022-10-08 13:31:06,656 - freqtrade.configuration.configuration - INFO - Overriding timeframe with Command line argument
+2022-10-08 13:31:06,656 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-10-08 13:31:06,656 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-10-08 13:31:06,688 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-10-08 13:31:06,688 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-10-08 13:31:06,688 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `forcebuy_enable` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `force_entry_enable` setting in your configuration instead.
+2022-10-08 13:31:06,688 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 13:31:06,700 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-10-08 13:31:06,706 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-10-08 13:31:06,707 - freqtrade.exchange.exchange - INFO - Using CCXT 1.91.29
+2022-10-08 13:31:06,760 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-10-08 13:31:09,761 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-10-08 13:31:10,080 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy kumo_breakout from '/opt/freqtrade/user_data/strategies/kumo_breakout.py'...
+2022-10-08 13:31:10,080 - freqtrade.strategy.hyper - INFO - Loading parameters from file /opt/freqtrade/user_data/strategies/kumo_breakout.json
+2022-10-08 13:31:10,082 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2022-10-08 13:31:10,082 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-10-08 13:31:10,082 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2022-10-08 13:31:10,083 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+2022-10-08 13:31:10,083 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.14300000000000002, '39': 0.064, '60': 0.039, '180': 0}
+2022-10-08 13:31:10,083 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-10-08 13:31:10,083 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.347
+2022-10-08 13:31:10,084 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-10-08 13:31:10,084 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2022-10-08 13:31:10,084 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-10-08 13:31:10,084 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-10-08 13:31:10,084 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2022-10-08 13:31:10,085 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-10-08 13:31:10,085 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'gtc', 'exit': 'gtc'}
+2022-10-08 13:31:10,085 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-10-08 13:31:10,085 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2022-10-08 13:31:10,085 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-10-08 13:31:10,087 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 15
+2022-10-08 13:31:10,087 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-10-08 13:31:10,088 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-10-08 13:31:10,089 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-10-08 13:31:10,089 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-10-08 13:31:10,089 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 13:31:10,099 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/opt/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-10-08 13:31:10,348 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 15 ...
+2022-10-08 13:31:21,039 - freqtrade.data.history.idatahandler - WARNING - BCH/USDT, spot, 5m, data starts at 2019-11-28 10:00:00
+2022-10-08 13:31:28,160 - freqtrade.data.history.idatahandler - WARNING - LINK/USDT, spot, 5m, data starts at 2019-01-16 10:00:00
+2022-10-08 13:31:31,750 - freqtrade.data.history.idatahandler - WARNING - DOT/USDT, spot, 5m, data starts at 2020-08-18 23:00:00
+2022-10-08 13:31:34,932 - freqtrade.data.history.idatahandler - WARNING - XMR/USDT, spot, 5m, data starts at 2019-03-15 04:00:00
+2022-10-08 13:31:37,626 - freqtrade.data.history.idatahandler - WARNING - XEM/USDT, spot, 5m, data starts at 2020-11-24 13:00:00
+2022-10-08 13:31:40,648 - freqtrade.data.history.idatahandler - WARNING - XTZ/USDT, spot, 5m, data starts at 2019-09-24 11:00:00
+2022-10-08 13:31:42,236 - freqtrade.data.history.idatahandler - WARNING - THETA/USDT, spot, 5m, data starts at 2019-04-10 04:00:00
+2022-10-08 13:31:47,406 - freqtrade.data.history.idatahandler - WARNING - DASH/USDT, spot, 5m, data starts at 2019-03-28 04:00:00
+2022-10-08 13:31:52,730 - freqtrade.data.history.idatahandler - WARNING - ATOM/USDT, spot, 5m, data starts at 2019-04-29 04:00:00
+2022-10-08 13:31:53,560 - freqtrade.data.history.idatahandler - WARNING - FIL/USDT, spot, 5m, data starts at 2020-10-15 17:00:00
+2022-10-08 13:31:54,226 - freqtrade.data.history.idatahandler - WARNING - UNI/USDT, spot, 5m, data starts at 2020-09-17 03:00:00
+2022-10-08 13:31:55,001 - freqtrade.data.history.idatahandler - WARNING - AAVE/USDT, spot, 5m, data starts at 2020-10-15 03:00:00
+2022-10-08 13:31:55,782 - freqtrade.data.history.idatahandler - WARNING - SNX/USDT, spot, 5m, data starts at 2020-07-09 12:00:00
+2022-10-08 13:31:57,534 - freqtrade.data.history.idatahandler - WARNING - ZIL/USDT, spot, 5m, data starts at 2019-02-19 11:00:00
+2022-10-08 13:31:59,486 - freqtrade.data.history.idatahandler - WARNING - ZEC/USDT, spot, 5m, data starts at 2019-03-21 04:00:00
+2022-10-08 13:32:00,397 - freqtrade.data.history.idatahandler - WARNING - YFI/USDT, spot, 5m, data starts at 2020-08-10 12:00:00
+2022-10-08 13:32:04,119 - freqtrade.data.history.idatahandler - WARNING - WAVES/USDT, spot, 5m, data starts at 2019-01-18 10:00:00
+2022-10-08 13:32:05,901 - freqtrade.data.history.idatahandler - WARNING - DOGE/USDT, spot, 5m, data starts at 2019-07-05 12:00:00
+2022-10-08 13:32:06,820 - freqtrade.data.history.idatahandler - WARNING - COMP/USDT, spot, 5m, data starts at 2020-06-25 06:00:00
+2022-10-08 13:32:07,641 - freqtrade.data.history.idatahandler - WARNING - MKR/USDT, spot, 5m, data starts at 2020-07-23 14:00:00
+2022-10-08 13:32:08,298 - freqtrade.data.history.idatahandler - WARNING - GRT/USDT, spot, 5m, data starts at 2020-12-17 20:30:00
+2022-10-08 13:32:09,508 - freqtrade.data.history.idatahandler - WARNING - FTT/USDT, spot, 5m, data starts at 2019-12-20 03:00:00
+2022-10-08 13:32:10,456 - freqtrade.data.history.idatahandler - WARNING - DCR/USDT, spot, 5m, data starts at 2020-07-30 05:00:00
+2022-10-08 13:32:11,252 - freqtrade.data.history.idatahandler - WARNING - SUSHI/USDT, spot, 5m, data starts at 2020-09-01 11:00:00
+2022-10-08 13:32:11,902 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT, spot, 5m, data starts at 2020-09-09 09:00:00
+2022-10-08 13:32:12,709 - freqtrade.data.history.idatahandler - WARNING - KSM/USDT, spot, 5m, data starts at 2020-09-04 11:00:00
+2022-10-08 13:32:14,409 - freqtrade.data.history.idatahandler - WARNING - ALGO/USDT, spot, 5m, data starts at 2019-06-22 00:00:00
+2022-10-08 13:32:16,725 - freqtrade.data.history.idatahandler - WARNING - OMG/USDT, spot, 5m, data starts at 2019-04-03 04:00:00
+2022-10-08 13:32:17,794 - freqtrade.data.history.idatahandler - WARNING - DGB/USDT, spot, 5m, data starts at 2020-07-20 12:00:00
+2022-10-08 13:32:20,820 - freqtrade.data.history.idatahandler - WARNING - EGLD/USDT, spot, 5m, data starts at 2020-09-03 03:00:00
+2022-10-08 13:32:22,244 - freqtrade.data.history.idatahandler - WARNING - BAT/USDT, spot, 5m, data starts at 2019-03-04 10:00:00
+2022-10-08 13:32:23,664 - freqtrade.data.history.idatahandler - WARNING - STX/USDT, spot, 5m, data starts at 2019-10-25 04:00:00
+2022-10-08 13:32:25,670 - freqtrade.data.history.idatahandler - WARNING - ZRX/USDT, spot, 5m, data starts at 2019-02-28 04:00:00
+2022-10-08 13:32:26,643 - freqtrade.data.history.idatahandler - WARNING - LUNA/USDT, spot, 5m, data starts at 2020-08-21 10:00:00
+2022-10-08 13:32:28,163 - freqtrade.data.history.idatahandler - WARNING - REN/USDT, spot, 5m, data starts at 2019-09-25 12:00:00
+2022-10-08 13:32:29,429 - freqtrade.data.history.idatahandler - WARNING - NEAR/USDT, spot, 5m, data starts at 2020-10-14 05:00:00
+2022-10-08 13:32:32,535 - freqtrade.optimize.backtesting - INFO - Loading data from 2018-12-31 22:45:00 up to 2021-12-31 00:00:00 (1095 days).
+2022-10-08 13:32:32,538 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-10-08 13:32:32,611 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy kumo_breakout
+2022-10-08 13:32:32,612 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-10-08 13:32:32,612 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-10-08 13:32:32,613 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2022-10-08 13:33:10,005 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2019-01-01 00:00:00 up to 2021-12-31 00:00:00 (1095 days).
+2022-10-08 14:23:27,059 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/backtest-result-2022-10-08_14-23-26.meta.json"
+2022-10-08 14:23:27,189 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/backtest-result-2022-10-08_14-23-26.json"
+2022-10-08 14:23:29,570 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy kumo_breakout
+============================================================ BACKTESTING REPORT ===========================================================
+|       Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |
+|------------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------|
+|   BNB/USDT |    733 |           0.33 |         238.52 |           447.970 |          44.80 |   1 day, 8:38:00 |   324   396    13  44.2 |
+|   TRX/USDT |    165 |           0.65 |         107.32 |           178.551 |          17.86 |   1 day, 2:16:00 |    78    85     2  47.3 |
+|   XTZ/USDT |    108 |           1.02 |         109.71 |           163.969 |          16.40 |         17:29:00 |    49    59     0   100 |
+|   ADA/USDT |    625 |           0.26 |         161.88 |           157.470 |          15.75 |  1 day, 12:48:00 |   282   328    15  45.1 |
+|   ETH/USDT |    713 |           0.20 |         144.62 |           142.354 |          14.24 |  1 day, 11:31:00 |   314   387    12  44.0 |
+|  LINK/USDT |    793 |           0.26 |         206.49 |           127.807 |          12.78 |   1 day, 4:29:00 |   358   414    21  45.1 |
+|  ATOM/USDT |     38 |           1.27 |          48.33 |            78.580 |           7.86 |         19:54:00 |    21    17     0   100 |
+|   EOS/USDT |    228 |           0.36 |          81.16 |            77.538 |           7.75 |   1 day, 7:45:00 |    96   129     3  42.1 |
+|   VET/USDT |     77 |           0.66 |          51.10 |            71.938 |           7.19 |         12:07:00 |    40    36     1  51.9 |
+|   XEM/USDT |     59 |           0.40 |          23.48 |            69.181 |           6.92 |         15:14:00 |    28    29     2  47.5 |
+|  DASH/USDT |     40 |           0.68 |          27.35 |            49.280 |           4.93 |         13:13:00 |    16    24     0   100 |
+|   ETC/USDT |     21 |           1.38 |          28.92 |            44.120 |           4.41 | 3 days, 18:19:00 |    10    11     0   100 |
+|   FIL/USDT |     21 |           0.89 |          18.68 |            40.137 |           4.01 |  1 day, 10:28:00 |     6    15     0   100 |
+|   MKR/USDT |      6 |           3.64 |          21.82 |            39.865 |           3.99 |          1:43:00 |     5     1     0   100 |
+|   UNI/USDT |     13 |           1.09 |          14.18 |            39.783 |           3.98 |          4:09:00 |     6     7     0   100 |
+| WAVES/USDT |     39 |           0.48 |          18.81 |            38.194 |           3.82 |  1 day, 21:53:00 |    18    20     1  46.2 |
+|   STX/USDT |      9 |           1.66 |          14.90 |            30.746 |           3.07 |         21:52:00 |     4     5     0   100 |
+|   FTT/USDT |     10 |           2.41 |          24.12 |            29.498 |           2.95 |         19:11:00 |     6     4     0   100 |
+|  DOGE/USDT |     20 |           0.11 |           2.17 |            28.106 |           2.81 | 3 days, 23:15:00 |    10     9     1  50.0 |
+|   BAT/USDT |     18 |           1.32 |          23.75 |            27.685 |           2.77 |   1 day, 9:21:00 |     7    11     0   100 |
+|  NEAR/USDT |      3 |           3.43 |          10.29 |            21.835 |           2.18 |          2:30:00 |     2     1     0   100 |
+|   DGB/USDT |      8 |           1.29 |          10.29 |            21.222 |           2.12 |          5:40:00 |     2     6     0   100 |
+|   NEO/USDT |     64 |          -0.11 |          -6.77 |            18.770 |           1.88 |  1 day, 23:31:00 |    25    38     1  39.1 |
+|   OMG/USDT |     11 |           0.87 |           9.55 |            17.934 |           1.79 |         20:38:00 |     5     6     0   100 |
+| THETA/USDT |     97 |           0.32 |          31.32 |            16.561 |           1.66 |   1 day, 7:50:00 |    44    51     2  45.4 |
+|   SNX/USDT |     16 |          -0.53 |          -8.41 |            16.333 |           1.63 |          6:24:00 |    10     5     1  62.5 |
+|  EGLD/USDT |      9 |           0.87 |           7.79 |            15.484 |           1.55 |   1 day, 6:13:00 |     2     7     0   100 |
+|   GRT/USDT |      5 |           1.56 |           7.79 |            15.165 |           1.52 |  2 days, 9:04:00 |     2     3     0   100 |
+|   ZRX/USDT |     12 |           1.39 |          16.70 |            14.509 |           1.45 |          9:08:00 |     6     6     0   100 |
+|   ONT/USDT |     18 |           0.69 |          12.47 |            13.351 |           1.34 |         16:34:00 |     5    13     0   100 |
+| SUSHI/USDT |      3 |           3.43 |          10.29 |            12.652 |           1.27 |         14:42:00 |     2     1     0   100 |
+|   XRP/USDT |    521 |           0.07 |          36.63 |            11.008 |           1.10 |  2 days, 0:56:00 |   226   276    19  43.4 |
+|   DCR/USDT |     12 |           0.49 |           5.92 |             8.966 |           0.90 |          6:26:00 |     6     6     0   100 |
+|   YFI/USDT |      7 |           0.74 |           5.15 |             7.368 |           0.74 |          2:59:00 |     3     4     0   100 |
+|   ICX/USDT |     12 |           0.44 |           5.32 |             6.227 |           0.62 |          6:03:00 |     6     6     0   100 |
+|   REN/USDT |      3 |           1.30 |           3.90 |             2.539 |           0.25 |          4:15:00 |     1     2     0   100 |
+|   KSM/USDT |      4 |           0.35 |           1.39 |             2.480 |           0.25 |         16:16:00 |     2     2     0   100 |
+|  COMP/USDT |      6 |           0.00 |           0.00 |             0.000 |           0.00 |         21:26:00 |     0     6     0     0 |
+|   BTC/USDT |    637 |           0.13 |          79.86 |           -36.498 |          -3.65 |  1 day, 16:04:00 |   262   366     9  41.1 |
+|  AAVE/USDT |     13 |          -1.82 |         -23.61 |           -49.151 |          -4.92 |          5:11:00 |     3     9     1  23.1 |
+|  ALGO/USDT |      8 |          -3.87 |         -30.93 |           -57.753 |          -5.78 |  3 days, 1:36:00 |     1     6     1  12.5 |
+|  LUNA/USDT |      6 |          -4.39 |         -26.36 |           -76.222 |          -7.62 |          3:18:00 |     4     1     1  66.7 |
+|   XMR/USDT |    408 |           0.02 |           6.52 |           -83.725 |          -8.37 |   1 day, 4:24:00 |   176   226     6  43.1 |
+|   DOT/USDT |    330 |           0.05 |          16.40 |           -96.946 |          -9.69 |   1 day, 1:34:00 |   141   179    10  42.7 |
+|   ZEC/USDT |     18 |          -3.24 |         -58.32 |          -113.233 |         -11.32 |  3 days, 0:57:00 |     6    10     2  33.3 |
+|   ZIL/USDT |     30 |          -1.17 |         -35.21 |          -122.847 |         -12.28 |  1 day, 20:10:00 |    12    16     2  40.0 |
+|   UMA/USDT |      8 |          -7.32 |         -58.56 |          -185.255 |         -18.53 |         12:21:00 |     2     4     2  25.0 |
+|   BCH/USDT |    451 |          -0.04 |         -19.66 |          -208.713 |         -20.87 |  1 day, 14:34:00 |   194   244    13  43.0 |
+|   LTC/USDT |    733 |           0.09 |          63.44 |          -214.208 |         -21.42 |   1 day, 9:14:00 |   300   417    16  40.9 |
+|   XLM/USDT |    460 |          -0.23 |        -106.85 |          -253.895 |         -25.39 |  1 day, 16:38:00 |   198   246    16  43.0 |
+|      TOTAL |   7649 |           0.17 |        1333.62 |           606.728 |          60.67 |  1 day, 10:12:00 |  3326  4150   173  43.5 |
+================================================================ ENTER TAG STATS =================================================================
+|                TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |    Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+--------+----------------+----------------+-------------------+----------------+-----------------+-------------------------|
+| kumo_breakout_long |   7649 |           0.17 |        1333.62 |           606.728 |          60.67 | 1 day, 10:12:00 |  3326  4150   173  43.5 |
+|              TOTAL |   7649 |           0.17 |        1333.62 |           606.728 |          60.67 | 1 day, 10:12:00 |  3326  4150   173  43.5 |
+===================================================== EXIT REASON STATS =====================================================
+|   Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|           roi |    7476 |   3326  4150     0   100 |           0.96 |        7173.28 |         12235.5   |         717.33 |
+|     stop_loss |     163 |      0     0   163     0 |         -34.83 |       -5677.37 |        -11309     |        -567.74 |
+|    force_exit |      10 |      0     0    10     0 |         -16.23 |        -162.29 |          -319.741 |         -16.23 |
+========================================================= LEFT OPEN TRADES REPORT =========================================================
+|      Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |      Avg Duration |   Win  Draw  Loss  Win% |
+|-----------+--------+----------------+----------------+-------------------+----------------+-------------------+-------------------------|
+|  XEM/USDT |      1 |         -13.17 |         -13.17 |            -5.583 |          -0.56 |  22 days, 5:15:00 |     0     0     1     0 |
+|  BTC/USDT |      1 |          -9.21 |          -9.21 |           -17.404 |          -1.74 |   3 days, 6:35:00 |     0     0     1     0 |
+|  LTC/USDT |      1 |          -9.67 |          -9.67 |           -18.163 |          -1.82 |   5 days, 8:20:00 |     0     0     1     0 |
+|  BCH/USDT |      1 |         -10.92 |         -10.92 |           -20.149 |          -2.01 |  22 days, 5:00:00 |     0     0     1     0 |
+|  DOT/USDT |      1 |         -15.69 |         -15.69 |           -29.652 |          -2.97 |   3 days, 7:40:00 |     0     0     1     0 |
+|  XRP/USDT |      1 |         -17.53 |         -17.53 |           -32.856 |          -3.29 |   7 days, 4:10:00 |     0     0     1     0 |
+| LINK/USDT |      1 |         -17.94 |         -17.94 |           -33.899 |          -3.39 |   3 days, 6:20:00 |     0     0     1     0 |
+|  ADA/USDT |      1 |         -22.19 |         -22.19 |           -50.389 |          -5.04 |  28 days, 4:50:00 |     0     0     1     0 |
+|  BNB/USDT |      1 |         -22.37 |         -22.37 |           -52.613 |          -5.26 |  53 days, 9:35:00 |     0     0     1     0 |
+|  ETH/USDT |      1 |         -23.62 |         -23.62 |           -59.032 |          -5.90 |  50 days, 9:45:00 |     0     0     1     0 |
+|     TOTAL |     10 |         -16.23 |        -162.29 |          -319.741 |         -31.97 | 19 days, 21:09:00 |     0     0    10     0 |
+================== SUMMARY METRICS ==================
+| Metric                      | Value               |
+|-----------------------------+---------------------|
+| Backtesting from            | 2019-01-01 00:00:00 |
+| Backtesting to              | 2021-12-31 00:00:00 |
+| Max open trades             | 10                  |
+|                             |                     |
+| Total/Daily Avg Trades      | 7649 / 6.99         |
+| Starting balance            | 1000 USDT           |
+| Final balance               | 1606.728 USDT       |
+| Absolute profit             | 606.728 USDT        |
+| Total profit %              | 60.67%              |
+| CAGR %                      | 17.12%              |
+| Profit factor               | 1.05                |
+| Trades per day              | 6.99                |
+| Avg. daily profit %         | 0.06%               |
+| Avg. stake amount           | 162.154 USDT        |
+| Total trade volume          | 1240314.074 USDT    |
+|                             |                     |
+| Best Pair                   | BNB/USDT 238.52%    |
+| Worst Pair                  | XLM/USDT -106.85%   |
+| Best trade                  | LINK/USDT 14.29%    |
+| Worst trade                 | TRX/USDT -34.83%    |
+| Best day                    | 308.703 USDT        |
+| Worst day                   | -1251.544 USDT      |
+| Days win/draw/lose          | 589 / 445 / 62      |
+| Avg. Duration Winners       | 2:33:00             |
+| Avg. Duration Loser         | 14 days, 8:55:00    |
+| Rejected Entry signals      | 8556726             |
+| Entry/Exit Timeouts         | 0 / 0               |
+|                             |                     |
+| Min balance                 | 516.307 USDT        |
+| Max balance                 | 4093.349 USDT       |
+| Max % of account underwater | 75.17%              |
+| Absolute Drawdown (Account) | 60.96%              |
+| Absolute Drawdown           | 2495.228 USDT       |
+| Drawdown high               | 3093.349 USDT       |
+| Drawdown low                | 598.121 USDT        |
+| Drawdown Start              | 2021-05-16 07:30:00 |
+| Drawdown End                | 2021-06-22 13:35:00 |
+| Market change               | 1230.65%            |
+=====================================================
+
+2022-10-08 14:24:46,970 - freqtrade.exchange.exchange - INFO - Closing async ccxt session.
+(.env)
+:/opt/freqtrade (stable) [?]
+$ nano kumo_breakout-5min-hyperopt-backtest-result1.txt
+^[[A^[[A^[[B^[[B(.env)
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20180101-20220101
+2022-10-08 14:45:20,381 - freqtrade.configuration.load_config - INFO - Using config: user_data/backtest-config.json ...
+2022-10-08 14:45:20,398 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-10-08 14:45:20,398 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2022-10-08 14:45:20,399 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2022-10-08 14:45:20,399 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20180101-20220101 ...
+2022-10-08 14:45:20,399 - freqtrade.configuration.configuration - INFO - Using user-data directory: /opt/freqtrade/user_data ...
+2022-10-08 14:45:20,403 - freqtrade.configuration.configuration - INFO - Using data directory: /opt/freqtrade/user_data/data/binance ...
+2022-10-08 14:45:20,403 - freqtrade.configuration.configuration - INFO - Overriding timeframe with Command line argument
+2022-10-08 14:45:20,404 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-10-08 14:45:20,404 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-10-08 14:45:20,441 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-10-08 14:45:20,441 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-10-08 14:45:20,442 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `forcebuy_enable` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `force_entry_enable` setting in your configuration instead.
+2022-10-08 14:45:20,442 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 14:45:20,452 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-10-08 14:45:20,456 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-10-08 14:45:20,456 - freqtrade.exchange.exchange - INFO - Using CCXT 1.91.29
+2022-10-08 14:45:20,509 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-10-08 14:45:28,819 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-10-08 14:45:35,257 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy kumo_breakout from '/opt/freqtrade/user_data/strategies/kumo_breakout.py'...
+2022-10-08 14:45:35,257 - freqtrade.strategy.hyper - INFO - Loading parameters from file /opt/freqtrade/user_data/strategies/kumo_breakout.json
+2022-10-08 14:45:35,259 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2022-10-08 14:45:35,259 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-10-08 14:45:35,259 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.14300000000000002, '39': 0.064, '60': 0.039, '180': 0}
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.347
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-10-08 14:45:35,260 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2022-10-08 14:45:35,261 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-10-08 14:45:35,261 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'gtc', 'exit': 'gtc'}
+2022-10-08 14:45:35,261 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-10-08 14:45:35,261 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2022-10-08 14:45:35,261 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-10-08 14:45:35,263 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 15
+2022-10-08 14:45:35,263 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-10-08 14:45:35,264 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-10-08 14:45:35,265 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 14:45:35,278 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/opt/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-10-08 14:45:35,498 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 15 ...
+2022-10-08 14:46:01,558 - freqtrade.data.history.idatahandler - WARNING - XRP/USDT, spot, 5m, data starts at 2018-05-04 08:10:00
+2022-10-08 14:46:06,433 - freqtrade.data.history.idatahandler - WARNING - BCH/USDT, spot, 5m, data starts at 2019-11-28 10:00:00
+2022-10-08 14:46:16,389 - freqtrade.data.history.idatahandler - WARNING - LINK/USDT, spot, 5m, data starts at 2019-01-16 10:00:00
+2022-10-08 14:46:22,330 - freqtrade.data.history.idatahandler - WARNING - ADA/USDT, spot, 5m, data starts at 2018-04-17 04:00:00
+2022-10-08 14:46:23,444 - freqtrade.data.history.idatahandler - WARNING - DOT/USDT, spot, 5m, data starts at 2020-08-18 23:00:00
+2022-10-08 14:46:45,006 - freqtrade.data.history.idatahandler - WARNING - XLM/USDT, spot, 5m, data starts at 2018-05-31 09:30:00
+2022-10-08 14:46:47,387 - freqtrade.data.history.idatahandler - WARNING - XMR/USDT, spot, 5m, data starts at 2019-03-15 04:00:00
+2022-10-08 14:46:49,808 - freqtrade.data.history.idatahandler - WARNING - EOS/USDT, spot, 5m, data starts at 2018-05-28 05:00:00
+2022-10-08 14:46:50,814 - freqtrade.data.history.idatahandler - WARNING - XEM/USDT, spot, 5m, data starts at 2020-11-24 13:00:00
+2022-10-08 14:46:53,530 - freqtrade.data.history.idatahandler - WARNING - TRX/USDT, spot, 5m, data starts at 2018-06-11 11:30:00
+2022-10-08 14:46:55,024 - freqtrade.data.history.idatahandler - WARNING - XTZ/USDT, spot, 5m, data starts at 2019-09-24 11:00:00
+2022-10-08 14:46:58,893 - freqtrade.data.history.idatahandler - WARNING - THETA/USDT, spot, 5m, data starts at 2019-04-10 04:00:00
+2022-10-08 14:47:27,525 - freqtrade.data.history.idatahandler - WARNING - DASH/USDT, spot, 5m, data starts at 2019-03-28 04:00:00
+2022-10-08 14:47:30,618 - freqtrade.data.history.idatahandler - WARNING - VET/USDT, spot, 5m, data starts at 2018-07-25 04:00:00
+2022-10-08 14:47:32,734 - freqtrade.data.history.idatahandler - WARNING - ATOM/USDT, spot, 5m, data starts at 2019-04-29 04:00:00
+2022-10-08 14:47:33,759 - freqtrade.data.history.idatahandler - WARNING - FIL/USDT, spot, 5m, data starts at 2020-10-15 17:00:00
+2022-10-08 14:47:34,834 - freqtrade.data.history.idatahandler - WARNING - UNI/USDT, spot, 5m, data starts at 2020-09-17 03:00:00
+2022-10-08 14:47:35,914 - freqtrade.data.history.idatahandler - WARNING - AAVE/USDT, spot, 5m, data starts at 2020-10-15 03:00:00
+2022-10-08 14:48:04,414 - freqtrade.data.history.idatahandler - WARNING - SNX/USDT, spot, 5m, data starts at 2020-07-09 12:00:00
+2022-10-08 14:48:07,133 - freqtrade.data.history.idatahandler - WARNING - ZIL/USDT, spot, 5m, data starts at 2019-02-19 11:00:00
+2022-10-08 14:48:08,785 - freqtrade.data.history.idatahandler - WARNING - ZEC/USDT, spot, 5m, data starts at 2019-03-21 04:00:00
+2022-10-08 14:48:10,387 - freqtrade.data.history.idatahandler - WARNING - YFI/USDT, spot, 5m, data starts at 2020-08-10 12:00:00
+2022-10-08 14:48:13,868 - freqtrade.data.history.idatahandler - WARNING - ETC/USDT, spot, 5m, data starts at 2018-06-12 02:30:00
+2022-10-08 14:48:15,693 - freqtrade.data.history.idatahandler - WARNING - WAVES/USDT, spot, 5m, data starts at 2019-01-18 10:00:00
+2022-10-08 14:48:17,563 - freqtrade.data.history.idatahandler - WARNING - DOGE/USDT, spot, 5m, data starts at 2019-07-05 12:00:00
+2022-10-08 14:48:18,780 - freqtrade.data.history.idatahandler - WARNING - COMP/USDT, spot, 5m, data starts at 2020-06-25 06:00:00
+2022-10-08 14:48:20,368 - freqtrade.data.history.idatahandler - WARNING - MKR/USDT, spot, 5m, data starts at 2020-07-23 14:00:00
+2022-10-08 14:48:21,144 - freqtrade.data.history.idatahandler - WARNING - GRT/USDT, spot, 5m, data starts at 2020-12-17 20:30:00
+2022-10-08 14:48:22,537 - freqtrade.data.history.idatahandler - WARNING - FTT/USDT, spot, 5m, data starts at 2019-12-20 03:00:00
+2022-10-08 14:48:23,700 - freqtrade.data.history.idatahandler - WARNING - DCR/USDT, spot, 5m, data starts at 2020-07-30 05:00:00
+2022-10-08 14:48:24,719 - freqtrade.data.history.idatahandler - WARNING - SUSHI/USDT, spot, 5m, data starts at 2020-09-01 11:00:00
+2022-10-08 14:48:25,670 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT, spot, 5m, data starts at 2020-09-09 09:00:00
+2022-10-08 14:48:26,702 - freqtrade.data.history.idatahandler - WARNING - KSM/USDT, spot, 5m, data starts at 2020-09-04 11:00:00
+2022-10-08 14:48:31,152 - freqtrade.data.history.idatahandler - WARNING - ALGO/USDT, spot, 5m, data starts at 2019-06-22 00:00:00
+2022-10-08 14:48:34,231 - freqtrade.data.history.idatahandler - WARNING - OMG/USDT, spot, 5m, data starts at 2019-04-03 04:00:00
+2022-10-08 14:48:35,218 - freqtrade.data.history.idatahandler - WARNING - DGB/USDT, spot, 5m, data starts at 2020-07-20 12:00:00
+2022-10-08 14:48:37,090 - freqtrade.data.history.idatahandler - WARNING - ONT/USDT, spot, 5m, data starts at 2018-06-08 07:00:00
+2022-10-08 14:48:38,344 - freqtrade.data.history.idatahandler - WARNING - EGLD/USDT, spot, 5m, data starts at 2020-09-03 03:00:00
+2022-10-08 14:48:40,344 - freqtrade.data.history.idatahandler - WARNING - BAT/USDT, spot, 5m, data starts at 2019-03-04 10:00:00
+2022-10-08 14:48:47,008 - freqtrade.data.history.idatahandler - WARNING - STX/USDT, spot, 5m, data starts at 2019-10-25 04:00:00
+2022-10-08 14:48:57,396 - freqtrade.data.history.idatahandler - WARNING - ZRX/USDT, spot, 5m, data starts at 2019-02-28 04:00:00
+2022-10-08 14:49:01,428 - freqtrade.data.history.idatahandler - WARNING - LUNA/USDT, spot, 5m, data starts at 2020-08-21 10:00:00
+2022-10-08 14:49:03,011 - freqtrade.data.history.idatahandler - WARNING - REN/USDT, spot, 5m, data starts at 2019-09-25 12:00:00
+2022-10-08 14:49:04,244 - freqtrade.data.history.idatahandler - WARNING - NEAR/USDT, spot, 5m, data starts at 2020-10-14 05:00:00
+2022-10-08 14:49:16,126 - freqtrade.data.history.idatahandler - WARNING - ICX/USDT, spot, 5m, data starts at 2018-06-13 08:00:00
+2022-10-08 14:49:19,708 - freqtrade.optimize.backtesting - INFO - Loading data from 2017-12-31 22:45:00 up to 2022-01-01 00:00:00 (1461 days).
+2022-10-08 14:49:19,709 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-10-08 14:49:19,833 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy kumo_breakout
+2022-10-08 14:49:19,833 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-10-08 14:49:19,834 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-10-08 14:49:19,834 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2022-10-08 14:51:57,478 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2018-01-01 00:00:00 up to 2022-01-01 00:00:00 (1461 days).
+Killed
+(.env)
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20180701-20220101
+2022-10-08 16:51:27,201 - freqtrade.configuration.load_config - INFO - Using config: user_data/backtest-config.json ...
+2022-10-08 16:51:27,207 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-10-08 16:51:27,207 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2022-10-08 16:51:27,208 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2022-10-08 16:51:27,208 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20180701-20220101 ...
+2022-10-08 16:51:27,208 - freqtrade.configuration.configuration - INFO - Using user-data directory: /opt/freqtrade/user_data ...
+2022-10-08 16:51:27,209 - freqtrade.configuration.configuration - INFO - Using data directory: /opt/freqtrade/user_data/data/binance ...
+2022-10-08 16:51:27,209 - freqtrade.configuration.configuration - INFO - Overriding timeframe with Command line argument
+2022-10-08 16:51:27,209 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-10-08 16:51:27,210 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-10-08 16:51:27,250 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-10-08 16:51:27,250 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-10-08 16:51:27,251 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `forcebuy_enable` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `force_entry_enable` setting in your configuration instead.
+2022-10-08 16:51:27,251 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 16:51:27,261 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-10-08 16:51:27,264 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-10-08 16:51:27,264 - freqtrade.exchange.exchange - INFO - Using CCXT 1.91.29
+2022-10-08 16:51:27,323 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-10-08 16:51:30,956 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-10-08 16:51:31,044 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy kumo_breakout from '/opt/freqtrade/user_data/strategies/kumo_breakout.py'...
+2022-10-08 16:51:31,045 - freqtrade.strategy.hyper - INFO - Loading parameters from file /opt/freqtrade/user_data/strategies/kumo_breakout.json
+2022-10-08 16:51:31,046 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2022-10-08 16:51:31,046 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.14300000000000002, '39': 0.064, '60': 0.039, '180': 0}
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.347
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'gtc', 'exit': 'gtc'}
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-10-08 16:51:31,047 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2022-10-08 16:51:31,048 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-10-08 16:51:31,049 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 15
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-10-08 16:51:31,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-10-08 16:51:31,051 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 16:51:31,061 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/opt/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-10-08 16:51:31,260 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 15 ...
+2022-10-08 16:51:40,584 - freqtrade.data.history.idatahandler - WARNING - BCH/USDT, spot, 5m, data starts at 2019-11-28 10:00:00
+2022-10-08 16:51:44,265 - freqtrade.data.history.idatahandler - WARNING - LINK/USDT, spot, 5m, data starts at 2019-01-16 10:00:00
+2022-10-08 16:51:46,908 - freqtrade.data.history.idatahandler - WARNING - DOT/USDT, spot, 5m, data starts at 2020-08-18 23:00:00
+2022-10-08 16:51:51,542 - freqtrade.data.history.idatahandler - WARNING - XMR/USDT, spot, 5m, data starts at 2019-03-15 04:00:00
+2022-10-08 16:51:54,566 - freqtrade.data.history.idatahandler - WARNING - XEM/USDT, spot, 5m, data starts at 2020-11-24 13:00:00
+2022-10-08 16:51:57,779 - freqtrade.data.history.idatahandler - WARNING - XTZ/USDT, spot, 5m, data starts at 2019-09-24 11:00:00
+2022-10-08 16:51:59,362 - freqtrade.data.history.idatahandler - WARNING - THETA/USDT, spot, 5m, data starts at 2019-04-10 04:00:00
+2022-10-08 16:52:03,383 - freqtrade.data.history.idatahandler - WARNING - DASH/USDT, spot, 5m, data starts at 2019-03-28 04:00:00
+2022-10-08 16:52:05,385 - freqtrade.data.history.idatahandler - WARNING - VET/USDT, spot, 5m, data starts at 2018-07-25 04:00:00
+2022-10-08 16:52:07,044 - freqtrade.data.history.idatahandler - WARNING - ATOM/USDT, spot, 5m, data starts at 2019-04-29 04:00:00
+2022-10-08 16:52:07,805 - freqtrade.data.history.idatahandler - WARNING - FIL/USDT, spot, 5m, data starts at 2020-10-15 17:00:00
+2022-10-08 16:52:08,431 - freqtrade.data.history.idatahandler - WARNING - UNI/USDT, spot, 5m, data starts at 2020-09-17 03:00:00
+2022-10-08 16:52:09,188 - freqtrade.data.history.idatahandler - WARNING - AAVE/USDT, spot, 5m, data starts at 2020-10-15 03:00:00
+2022-10-08 16:52:09,858 - freqtrade.data.history.idatahandler - WARNING - SNX/USDT, spot, 5m, data starts at 2020-07-09 12:00:00
+2022-10-08 16:52:11,401 - freqtrade.data.history.idatahandler - WARNING - ZIL/USDT, spot, 5m, data starts at 2019-02-19 11:00:00
+2022-10-08 16:52:12,969 - freqtrade.data.history.idatahandler - WARNING - ZEC/USDT, spot, 5m, data starts at 2019-03-21 04:00:00
+2022-10-08 16:52:14,010 - freqtrade.data.history.idatahandler - WARNING - YFI/USDT, spot, 5m, data starts at 2020-08-10 12:00:00
+2022-10-08 16:52:17,607 - freqtrade.data.history.idatahandler - WARNING - WAVES/USDT, spot, 5m, data starts at 2019-01-18 10:00:00
+2022-10-08 16:52:18,935 - freqtrade.data.history.idatahandler - WARNING - DOGE/USDT, spot, 5m, data starts at 2019-07-05 12:00:00
+2022-10-08 16:52:19,858 - freqtrade.data.history.idatahandler - WARNING - COMP/USDT, spot, 5m, data starts at 2020-06-25 06:00:00
+2022-10-08 16:52:20,748 - freqtrade.data.history.idatahandler - WARNING - MKR/USDT, spot, 5m, data starts at 2020-07-23 14:00:00
+2022-10-08 16:52:21,327 - freqtrade.data.history.idatahandler - WARNING - GRT/USDT, spot, 5m, data starts at 2020-12-17 20:30:00
+2022-10-08 16:52:22,377 - freqtrade.data.history.idatahandler - WARNING - FTT/USDT, spot, 5m, data starts at 2019-12-20 03:00:00
+2022-10-08 16:52:23,089 - freqtrade.data.history.idatahandler - WARNING - DCR/USDT, spot, 5m, data starts at 2020-07-30 05:00:00
+2022-10-08 16:52:23,915 - freqtrade.data.history.idatahandler - WARNING - SUSHI/USDT, spot, 5m, data starts at 2020-09-01 11:00:00
+2022-10-08 16:52:24,561 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT, spot, 5m, data starts at 2020-09-09 09:00:00
+2022-10-08 16:52:25,430 - freqtrade.data.history.idatahandler - WARNING - KSM/USDT, spot, 5m, data starts at 2020-09-04 11:00:00
+2022-10-08 16:52:26,939 - freqtrade.data.history.idatahandler - WARNING - ALGO/USDT, spot, 5m, data starts at 2019-06-22 00:00:00
+2022-10-08 16:52:28,588 - freqtrade.data.history.idatahandler - WARNING - OMG/USDT, spot, 5m, data starts at 2019-04-03 04:00:00
+2022-10-08 16:52:29,696 - freqtrade.data.history.idatahandler - WARNING - DGB/USDT, spot, 5m, data starts at 2020-07-20 12:00:00
+2022-10-08 16:52:32,744 - freqtrade.data.history.idatahandler - WARNING - EGLD/USDT, spot, 5m, data starts at 2020-09-03 03:00:00
+2022-10-08 16:52:34,148 - freqtrade.data.history.idatahandler - WARNING - BAT/USDT, spot, 5m, data starts at 2019-03-04 10:00:00
+2022-10-08 16:52:35,595 - freqtrade.data.history.idatahandler - WARNING - STX/USDT, spot, 5m, data starts at 2019-10-25 04:00:00
+2022-10-08 16:52:37,242 - freqtrade.data.history.idatahandler - WARNING - ZRX/USDT, spot, 5m, data starts at 2019-02-28 04:00:00
+2022-10-08 16:52:38,143 - freqtrade.data.history.idatahandler - WARNING - LUNA/USDT, spot, 5m, data starts at 2020-08-21 10:00:00
+2022-10-08 16:52:39,309 - freqtrade.data.history.idatahandler - WARNING - REN/USDT, spot, 5m, data starts at 2019-09-25 12:00:00
+2022-10-08 16:52:40,140 - freqtrade.data.history.idatahandler - WARNING - NEAR/USDT, spot, 5m, data starts at 2020-10-14 05:00:00
+2022-10-08 16:52:42,389 - freqtrade.optimize.backtesting - INFO - Loading data from 2018-06-30 22:45:00 up to 2022-01-01 00:00:00 (1280 days).
+2022-10-08 16:52:42,390 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-10-08 16:52:42,411 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy kumo_breakout
+2022-10-08 16:52:42,412 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-10-08 16:52:42,413 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-10-08 16:52:42,414 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2022-10-08 16:53:23,674 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2018-07-01 00:00:00 up to 2022-01-01 00:00:00 (1280 days).
+Killed
+(.env)
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20190101-20220101
+^CTraceback (most recent call last):
+  File "/opt/freqtrade/.env/bin/freqtrade", line 33, in <module>
+    sys.exit(load_entry_point('freqtrade', 'console_scripts', 'freqtrade')())
+  File "/opt/freqtrade/.env/bin/freqtrade", line 25, in importlib_load_entry_point
+    return next(matches).load()
+  File "/usr/lib/python3.8/importlib/metadata.py", line 77, in load
+    module = import_module(match.group('module'))
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/freqtrade/freqtrade/main.py", line 15, in <module>
+    from freqtrade.commands import Arguments
+  File "/opt/freqtrade/freqtrade/commands/__init__.py", line 12, in <module>
+    from freqtrade.commands.data_commands import (start_convert_data, start_convert_trades,
+  File "/opt/freqtrade/freqtrade/commands/data_commands.py", line 16, in <module>
+    from freqtrade.resolvers import ExchangeResolver
+  File "/opt/freqtrade/freqtrade/resolvers/__init__.py", line 10, in <module>
+    from freqtrade.resolvers.strategy_resolver import StrategyResolver
+  File "/opt/freqtrade/freqtrade/resolvers/strategy_resolver.py", line 19, in <module>
+    from freqtrade.strategy.interface import IStrategy
+  File "/opt/freqtrade/freqtrade/strategy/__init__.py", line 5, in <module>
+    from freqtrade.strategy.interface import IStrategy
+  File "/opt/freqtrade/freqtrade/strategy/interface.py", line 21, in <module>
+    from freqtrade.strategy.hyper import HyperStrategyMixin
+  File "/opt/freqtrade/freqtrade/strategy/hyper.py", line 12, in <module>
+    from freqtrade.strategy.parameters import BaseParameter
+  File "/opt/freqtrade/freqtrade/strategy/parameters.py", line 12, in <module>
+    from skopt.space import Integer, Real, Categorical
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/skopt/__init__.py", line 44, in <module>
+    from . import callbacks
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/skopt/callbacks.py", line 17, in <module>
+    from skopt.utils import dump
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/skopt/utils.py", line 3, in <module>
+    from sklearn.utils import check_random_state
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/sklearn/__init__.py", line 82, in <module>
+    from .base import clone
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/sklearn/base.py", line 17, in <module>
+    from .utils import _IS_32BIT
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/sklearn/utils/__init__.py", line 26, in <module>
+    from . import _joblib
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/sklearn/utils/_joblib.py", line 7, in <module>
+    import joblib
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/joblib/__init__.py", line 113, in <module>
+    from .memory import Memory, MemorizedResult, register_store_backend
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/joblib/memory.py", line 32, in <module>
+    from ._store_backends import StoreBackendBase, FileSystemStoreBackend
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/joblib/_store_backends.py", line 15, in <module>
+    from .backports import concurrency_safe_rename
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/joblib/backports.py", line 7, in <module>
+    from distutils.version import LooseVersion
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 914, in _find_spec
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/_distutils_hack/__init__.py", line 90, in find_spec
+    return method()
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/_distutils_hack/__init__.py", line 101, in spec_for_distutils
+    mod = importlib.import_module('setuptools._distutils')
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pkg_resources/__init__.py", line 74, in <module>
+    from pkg_resources.extern.jaraco.text import (
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pkg_resources/_vendor/jaraco/text/__init__.py", line 11, in <module>
+    from pkg_resources.extern.jaraco.functools import compose, method_cache
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pkg_resources/_vendor/jaraco/functools.py", line 8, in <module>
+    import pkg_resources.extern.more_itertools
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 657, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 556, in module_from_spec
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pkg_resources/extern/__init__.py", line 52, in create_module
+    return self.load_module(spec.name)
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pkg_resources/extern/__init__.py", line 37, in load_module
+    __import__(extant)
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 939, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1038, in get_data
+KeyboardInterrupt
+
+(.env)
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20170101-20290101
+^X^C^CTraceback (most recent call last):
+  File "/opt/freqtrade/.env/bin/freqtrade", line 33, in <module>
+    sys.exit(load_entry_point('freqtrade', 'console_scripts', 'freqtrade')())
+  File "/opt/freqtrade/.env/bin/freqtrade", line 25, in importlib_load_entry_point
+    return next(matches).load()
+  File "/usr/lib/python3.8/importlib/metadata.py", line 77, in load
+^C^C  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/freqtrade/freqtrade/main.py", line 15, in <module>
+    from freqtrade.commands import Arguments
+  File "/opt/freqtrade/freqtrade/commands/__init__.py", line 9, in <module>
+    from freqtrade.commands.analyze_commands import start_analysis_entries_exits
+  File "/opt/freqtrade/freqtrade/commands/analyze_commands.py", line 5, in <module>
+    from freqtrade.configuration import setup_utils_configuration
+  File "/opt/freqtrade/freqtrade/configuration/__init__.py", line 3, in <module>
+    from freqtrade.configuration.check_exchange import check_exchange
+  File "/opt/freqtrade/freqtrade/configuration/check_exchange.py", line 6, in <module>
+    from freqtrade.exchange import (available_exchanges, is_exchange_known_ccxt,
+  File "/opt/freqtrade/freqtrade/exchange/__init__.py", line 4, in <module>
+    from freqtrade.exchange.exchange import Exchange
+  File "/opt/freqtrade/freqtrade/exchange/exchange.py", line 20, in <module>
+    from pandas import DataFrame
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/pandas/__init__.py", line 11, in <module>
+    __import__(dependency)
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/numpy/__init__.py", line 143, in <module>
+    from . import lib
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/numpy/lib/__init__.py", line 21, in <module>
+    from . import scimath as emath
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/numpy/lib/scimath.py", line 37, in <module>
+    from numpy.lib.type_check import isreal
+  File "/opt/freqtrade/.env/lib/python3.8/site-packages/numpy/lib/type_check.py", line 16, in <module>
+    from .ufunclike import isneginf, isposinf
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 939, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1038, in get_data
+KeyboardInterrupt
+
+(.env)
+:/opt/freqtrade (stable) [?]
+$ ^C
+(.env)
+:/opt/freqtrade (stable) [?]
+$ btst kumo_breakout --timeframe 5m --timerange=20170101-20190101
+2022-10-08 18:03:02,812 - freqtrade.configuration.load_config - INFO - Using config: user_data/backtest-config.json ...
+2022-10-08 18:03:02,824 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-10-08 18:03:02,826 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2022-10-08 18:03:02,826 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 10 ...
+2022-10-08 18:03:02,826 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20170101-20190101 ...
+2022-10-08 18:03:02,827 - freqtrade.configuration.configuration - INFO - Using user-data directory: /opt/freqtrade/user_data ...
+2022-10-08 18:03:02,829 - freqtrade.configuration.configuration - INFO - Using data directory: /opt/freqtrade/user_data/data/binance ...
+2022-10-08 18:03:02,829 - freqtrade.configuration.configuration - INFO - Overriding timeframe with Command line argument
+2022-10-08 18:03:02,829 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-10-08 18:03:02,830 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-10-08 18:03:02,863 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-10-08 18:03:02,863 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-10-08 18:03:02,863 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `forcebuy_enable` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `force_entry_enable` setting in your configuration instead.
+2022-10-08 18:03:02,864 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 18:03:02,875 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-10-08 18:03:02,882 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-10-08 18:03:02,882 - freqtrade.exchange.exchange - INFO - Using CCXT 1.91.29
+2022-10-08 18:03:02,934 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-10-08 18:03:18,064 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-10-08 18:03:18,371 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy kumo_breakout from '/opt/freqtrade/user_data/strategies/kumo_breakout.py'...
+2022-10-08 18:03:18,371 - freqtrade.strategy.hyper - INFO - Loading parameters from file /opt/freqtrade/user_data/strategies/kumo_breakout.json
+2022-10-08 18:03:18,374 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2022-10-08 18:03:18,374 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-10-08 18:03:18,374 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2022-10-08 18:03:18,374 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+2022-10-08 18:03:18,374 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.14300000000000002, '39': 0.064, '60': 0.039, '180': 0}
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.347
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-10-08 18:03:18,375 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'gtc', 'exit': 'gtc'}
+2022-10-08 18:03:18,376 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-10-08 18:03:18,376 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2022-10-08 18:03:18,376 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-10-08 18:03:18,379 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 15
+2022-10-08 18:03:18,379 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-10-08 18:03:18,380 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-10-08 18:03:18,381 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-10-08 18:03:18,393 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/opt/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-10-08 18:03:18,611 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 15 ...
+2022-10-08 18:37:17,137 - freqtrade.data.history.idatahandler - WARNING - BTC/USDT, spot, 5m, data starts at 2017-08-17 04:00:00
+2022-10-08 18:37:20,211 - freqtrade.data.history.idatahandler - WARNING - ETH/USDT, spot, 5m, data starts at 2017-08-17 04:00:00
+2022-10-08 18:37:23,209 - freqtrade.data.history.idatahandler - WARNING - XRP/USDT, spot, 5m, data starts at 2018-05-04 08:10:00
+2022-10-08 18:37:26,025 - freqtrade.data.history.idatahandler - WARNING - LTC/USDT, spot, 5m, data starts at 2017-12-13 03:30:00
+2022-10-08 18:37:27,272 - freqtrade.data.history.idatahandler - WARNING - BCH/USDT, spot, 5m, data starts at 2019-11-28 10:00:00
+2022-10-08 18:37:27,294 - freqtrade.data.history.idatahandler - WARNING - No history for BCH/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:37:32,712 - freqtrade.data.history.idatahandler - WARNING - BNB/USDT, spot, 5m, data starts at 2017-11-06 03:50:00
+2022-10-08 18:37:41,385 - freqtrade.data.history.idatahandler - WARNING - LINK/USDT, spot, 5m, data starts at 2019-01-16 10:00:00
+2022-10-08 18:37:41,421 - freqtrade.data.history.idatahandler - WARNING - No history for LINK/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:37:44,570 - freqtrade.data.history.idatahandler - WARNING - ADA/USDT, spot, 5m, data starts at 2018-04-17 04:00:00
+2022-10-08 18:37:45,537 - freqtrade.data.history.idatahandler - WARNING - DOT/USDT, spot, 5m, data starts at 2020-08-18 23:00:00
+2022-10-08 18:37:45,555 - freqtrade.data.history.idatahandler - WARNING - No history for DOT/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:37:48,945 - freqtrade.data.history.idatahandler - WARNING - XLM/USDT, spot, 5m, data starts at 2018-05-31 09:30:00
+2022-10-08 18:37:56,577 - freqtrade.data.history.idatahandler - WARNING - XMR/USDT, spot, 5m, data starts at 2019-03-15 04:00:00
+2022-10-08 18:37:56,613 - freqtrade.data.history.idatahandler - WARNING - No history for XMR/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:37:59,133 - freqtrade.data.history.idatahandler - WARNING - EOS/USDT, spot, 5m, data starts at 2018-05-28 05:00:00
+2022-10-08 18:38:00,191 - freqtrade.data.history.idatahandler - WARNING - XEM/USDT, spot, 5m, data starts at 2020-11-24 13:00:00
+2022-10-08 18:38:00,204 - freqtrade.data.history.idatahandler - WARNING - No history for XEM/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:04,952 - freqtrade.data.history.idatahandler - WARNING - TRX/USDT, spot, 5m, data starts at 2018-06-11 11:30:00
+2022-10-08 18:38:06,887 - freqtrade.data.history.idatahandler - WARNING - XTZ/USDT, spot, 5m, data starts at 2019-09-24 11:00:00
+2022-10-08 18:38:06,917 - freqtrade.data.history.idatahandler - WARNING - No history for XTZ/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:08,665 - freqtrade.data.history.idatahandler - WARNING - THETA/USDT, spot, 5m, data starts at 2019-04-10 04:00:00
+2022-10-08 18:38:08,706 - freqtrade.data.history.idatahandler - WARNING - No history for THETA/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:17,173 - freqtrade.data.history.idatahandler - WARNING - NEO/USDT, spot, 5m, data starts at 2017-11-20 03:40:00
+2022-10-08 18:38:19,238 - freqtrade.data.history.idatahandler - WARNING - DASH/USDT, spot, 5m, data starts at 2019-03-28 04:00:00
+2022-10-08 18:38:19,277 - freqtrade.data.history.idatahandler - WARNING - No history for DASH/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:21,879 - freqtrade.data.history.idatahandler - WARNING - VET/USDT, spot, 5m, data starts at 2018-07-25 04:00:00
+2022-10-08 18:38:23,305 - freqtrade.data.history.idatahandler - WARNING - ATOM/USDT, spot, 5m, data starts at 2019-04-29 04:00:00
+2022-10-08 18:38:23,327 - freqtrade.data.history.idatahandler - WARNING - No history for ATOM/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:26,380 - freqtrade.data.history.idatahandler - WARNING - FIL/USDT, spot, 5m, data starts at 2020-10-15 17:00:00
+2022-10-08 18:38:26,395 - freqtrade.data.history.idatahandler - WARNING - No history for FIL/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:27,079 - freqtrade.data.history.idatahandler - WARNING - UNI/USDT, spot, 5m, data starts at 2020-09-17 03:00:00
+2022-10-08 18:38:27,099 - freqtrade.data.history.idatahandler - WARNING - No history for UNI/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:28,107 - freqtrade.data.history.idatahandler - WARNING - AAVE/USDT, spot, 5m, data starts at 2020-10-15 03:00:00
+2022-10-08 18:38:28,128 - freqtrade.data.history.idatahandler - WARNING - No history for AAVE/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:29,061 - freqtrade.data.history.idatahandler - WARNING - SNX/USDT, spot, 5m, data starts at 2020-07-09 12:00:00
+2022-10-08 18:38:29,086 - freqtrade.data.history.idatahandler - WARNING - No history for SNX/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:31,245 - freqtrade.data.history.idatahandler - WARNING - ZIL/USDT, spot, 5m, data starts at 2019-02-19 11:00:00
+2022-10-08 18:38:31,271 - freqtrade.data.history.idatahandler - WARNING - No history for ZIL/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:34,770 - freqtrade.data.history.idatahandler - WARNING - ZEC/USDT, spot, 5m, data starts at 2019-03-21 04:00:00
+2022-10-08 18:38:34,794 - freqtrade.data.history.idatahandler - WARNING - No history for ZEC/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:35,568 - freqtrade.data.history.idatahandler - WARNING - YFI/USDT, spot, 5m, data starts at 2020-08-10 12:00:00
+2022-10-08 18:38:35,593 - freqtrade.data.history.idatahandler - WARNING - No history for YFI/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:39,719 - freqtrade.data.history.idatahandler - WARNING - ETC/USDT, spot, 5m, data starts at 2018-06-12 02:30:00
+2022-10-08 18:38:47,611 - freqtrade.data.history.idatahandler - WARNING - WAVES/USDT, spot, 5m, data starts at 2019-01-18 10:00:00
+2022-10-08 18:38:47,637 - freqtrade.data.history.idatahandler - WARNING - No history for WAVES/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:49,078 - freqtrade.data.history.idatahandler - WARNING - DOGE/USDT, spot, 5m, data starts at 2019-07-05 12:00:00
+2022-10-08 18:38:49,099 - freqtrade.data.history.idatahandler - WARNING - No history for DOGE/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:52,102 - freqtrade.data.history.idatahandler - WARNING - COMP/USDT, spot, 5m, data starts at 2020-06-25 06:00:00
+2022-10-08 18:38:52,120 - freqtrade.data.history.idatahandler - WARNING - No history for COMP/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:53,105 - freqtrade.data.history.idatahandler - WARNING - MKR/USDT, spot, 5m, data starts at 2020-07-23 14:00:00
+2022-10-08 18:38:53,121 - freqtrade.data.history.idatahandler - WARNING - No history for MKR/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:53,695 - freqtrade.data.history.idatahandler - WARNING - GRT/USDT, spot, 5m, data starts at 2020-12-17 20:30:00
+2022-10-08 18:38:53,712 - freqtrade.data.history.idatahandler - WARNING - No history for GRT/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:38:56,049 - freqtrade.data.history.idatahandler - WARNING - FTT/USDT, spot, 5m, data starts at 2019-12-20 03:00:00
+2022-10-08 18:38:56,100 - freqtrade.data.history.idatahandler - WARNING - No history for FTT/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:02,401 - freqtrade.data.history.idatahandler - WARNING - DCR/USDT, spot, 5m, data starts at 2020-07-30 05:00:00
+2022-10-08 18:39:02,417 - freqtrade.data.history.idatahandler - WARNING - No history for DCR/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:03,009 - freqtrade.data.history.idatahandler - WARNING - SUSHI/USDT, spot, 5m, data starts at 2020-09-01 11:00:00
+2022-10-08 18:39:03,021 - freqtrade.data.history.idatahandler - WARNING - No history for SUSHI/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:03,753 - freqtrade.data.history.idatahandler - WARNING - UMA/USDT, spot, 5m, data starts at 2020-09-09 09:00:00
+2022-10-08 18:39:03,767 - freqtrade.data.history.idatahandler - WARNING - No history for UMA/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:04,428 - freqtrade.data.history.idatahandler - WARNING - KSM/USDT, spot, 5m, data starts at 2020-09-04 11:00:00
+2022-10-08 18:39:04,459 - freqtrade.data.history.idatahandler - WARNING - No history for KSM/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:06,905 - freqtrade.data.history.idatahandler - WARNING - ALGO/USDT, spot, 5m, data starts at 2019-06-22 00:00:00
+2022-10-08 18:39:06,994 - freqtrade.data.history.idatahandler - WARNING - No history for ALGO/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:09,989 - freqtrade.data.history.idatahandler - WARNING - OMG/USDT, spot, 5m, data starts at 2019-04-03 04:00:00
+2022-10-08 18:39:10,032 - freqtrade.data.history.idatahandler - WARNING - No history for OMG/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:16,985 - freqtrade.data.history.idatahandler - WARNING - DGB/USDT, spot, 5m, data starts at 2020-07-20 12:00:00
+2022-10-08 18:39:17,000 - freqtrade.data.history.idatahandler - WARNING - No history for DGB/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:19,260 - freqtrade.data.history.idatahandler - WARNING - ONT/USDT, spot, 5m, data starts at 2018-06-08 07:00:00
+2022-10-08 18:39:20,134 - freqtrade.data.history.idatahandler - WARNING - EGLD/USDT, spot, 5m, data starts at 2020-09-03 03:00:00
+2022-10-08 18:39:20,153 - freqtrade.data.history.idatahandler - WARNING - No history for EGLD/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:25,688 - freqtrade.data.history.idatahandler - WARNING - BAT/USDT, spot, 5m, data starts at 2019-03-04 10:00:00
+2022-10-08 18:39:25,720 - freqtrade.data.history.idatahandler - WARNING - No history for BAT/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:29,080 - freqtrade.data.history.idatahandler - WARNING - STX/USDT, spot, 5m, data starts at 2019-10-25 04:00:00
+2022-10-08 18:39:29,099 - freqtrade.data.history.idatahandler - WARNING - No history for STX/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:31,247 - freqtrade.data.history.idatahandler - WARNING - ZRX/USDT, spot, 5m, data starts at 2019-02-28 04:00:00
+2022-10-08 18:39:31,280 - freqtrade.data.history.idatahandler - WARNING - No history for ZRX/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:32,728 - freqtrade.data.history.idatahandler - WARNING - LUNA/USDT, spot, 5m, data starts at 2020-08-21 10:00:00
+2022-10-08 18:39:32,770 - freqtrade.data.history.idatahandler - WARNING - No history for LUNA/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:35,008 - freqtrade.data.history.idatahandler - WARNING - REN/USDT, spot, 5m, data starts at 2019-09-25 12:00:00
+2022-10-08 18:39:35,050 - freqtrade.data.history.idatahandler - WARNING - No history for REN/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:36,164 - freqtrade.data.history.idatahandler - WARNING - NEAR/USDT, spot, 5m, data starts at 2020-10-14 05:00:00
+2022-10-08 18:39:36,189 - freqtrade.data.history.idatahandler - WARNING - No history for NEAR/USDT, spot, 5m found. Use `freqtrade download-data` to download the data
+2022-10-08 18:39:46,585 - freqtrade.data.history.idatahandler - WARNING - ICX/USDT, spot, 5m, data starts at 2018-06-13 08:00:00
+2022-10-08 18:39:48,291 - freqtrade.optimize.backtesting - INFO - Loading data from 2017-08-17 04:00:00 up to 2019-01-01 00:00:00 (501 days).
+2022-10-08 18:39:48,716 - freqtrade.configuration.timerange - WARNING - Moving start-date by 15 candles to account for startup time.
+2022-10-08 18:39:48,717 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-10-08 18:39:49,133 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy kumo_breakout
+2022-10-08 18:39:49,134 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-10-08 18:39:49,134 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-10-08 18:39:49,135 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2022-10-08 18:39:59,937 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2017-08-17 05:15:00 up to 2019-01-01 00:00:00 (501 days).
+2022-10-08 18:57:28,963 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/backtest-result-2022-10-08_18-57-28.meta.json"
+2022-10-08 18:57:29,056 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/backtest-result-2022-10-08_18-57-28.json"
+2022-10-08 18:57:29,200 - freqtrade.misc - INFO - dumping json to "/opt/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy kumo_breakout
+=========================================================== BACKTESTING REPORT ==========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------|
+| BNB/USDT |    302 |           0.35 |         106.09 |           124.006 |          12.40 |   1 day, 8:50:00 |   150   138    14  49.7 |
+| ETC/USDT |     52 |           0.12 |           6.42 |            -1.581 |          -0.16 |         21:24:00 |    21    30     1  40.4 |
+| ICX/USDT |     22 |          -1.96 |         -43.16 |            -8.079 |          -0.81 |         22:00:00 |     6    14     2  27.3 |
+| XLM/USDT |     74 |          -0.59 |         -43.40 |           -27.667 |          -2.77 | 2 days, 13:09:00 |    33    37     4  44.6 |
+| TRX/USDT |     98 |          -0.83 |         -81.77 |           -50.459 |          -5.05 |  1 day, 19:20:00 |    42    50     6  42.9 |
+| XRP/USDT |    111 |          -0.60 |         -67.04 |           -60.836 |          -6.08 |  2 days, 0:44:00 |    46    58     7  41.4 |
+| VET/USDT |     26 |          -5.77 |        -149.94 |           -61.166 |          -6.12 | 2 days, 15:17:00 |     9    12     5  34.6 |
+| BTC/USDT |    362 |          -0.20 |         -72.35 |           -71.529 |          -7.15 |   1 day, 8:43:00 |   166   186    10  45.9 |
+| EOS/USDT |     81 |          -1.84 |        -148.83 |           -76.397 |          -7.64 | 2 days, 13:36:00 |    30    44     7  37.0 |
+| ONT/USDT |     45 |          -2.74 |        -123.36 |           -81.596 |          -8.16 |   1 day, 2:33:00 |    18    22     5  40.0 |
+| ADA/USDT |    145 |          -1.09 |        -157.82 |           -90.297 |          -9.03 |  1 day, 17:09:00 |    62    73    10  42.8 |
+| NEO/USDT |    314 |          -0.40 |        -125.08 |           -91.511 |          -9.15 |   1 day, 0:18:00 |   141   158    15  44.9 |
+| ETH/USDT |    443 |          -0.29 |        -130.15 |          -107.641 |         -10.76 |   1 day, 2:14:00 |   194   233    16  43.8 |
+| LTC/USDT |    226 |          -0.99 |        -224.27 |          -211.905 |         -21.19 |  1 day, 14:53:00 |    96   116    14  42.5 |
+|    TOTAL |   2301 |          -0.55 |       -1254.66 |          -816.657 |         -81.67 |  1 day, 10:30:00 |  1014  1171   116  44.1 |
+================================================================ ENTER TAG STATS =================================================================
+|                TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |    Avg Duration |   Win  Draw  Loss  Win% |
+|--------------------+--------+----------------+----------------+-------------------+----------------+-----------------+-------------------------|
+| kumo_breakout_long |   2301 |          -0.55 |       -1254.66 |          -816.657 |         -81.67 | 1 day, 10:30:00 |  1014  1171   116  44.1 |
+|              TOTAL |   2301 |          -0.55 |       -1254.66 |          -816.657 |         -81.67 | 1 day, 10:30:00 |  1014  1171   116  44.1 |
+===================================================== EXIT REASON STATS =====================================================
+|   Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|           roi |    2185 |   1014  1171     0   100 |           1.19 |        2601.07 |          2217.04  |         260.11 |
+|     stop_loss |     106 |      0     0   106     0 |         -34.83 |       -3692.03 |         -2998.71  |        -369.2  |
+|    force_exit |      10 |      0     0    10     0 |         -16.37 |        -163.7  |           -34.985 |         -16.37 |
+======================================================== LEFT OPEN TRADES REPORT ========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------|
+| BNB/USDT |      1 |          -4.69 |          -4.69 |            -1.000 |          -0.10 |  7 days, 9:05:00 |     0     0     1     0 |
+| ETH/USDT |      1 |         -14.76 |         -14.76 |            -3.161 |          -0.32 |  7 days, 8:10:00 |     0     0     1     0 |
+| BTC/USDT |      1 |         -15.28 |         -15.28 |            -3.438 |          -0.34 | 32 days, 6:35:00 |     0     0     1     0 |
+| EOS/USDT |      1 |         -17.33 |         -17.33 |            -3.582 |          -0.36 |  7 days, 8:25:00 |     0     0     1     0 |
+| ADA/USDT |      1 |         -16.98 |         -16.98 |            -3.617 |          -0.36 |  7 days, 9:05:00 |     0     0     1     0 |
+| LTC/USDT |      1 |         -16.96 |         -16.96 |            -3.619 |          -0.36 |  7 days, 8:25:00 |     0     0     1     0 |
+| ICX/USDT |      1 |         -16.92 |         -16.92 |            -3.624 |          -0.36 |  7 days, 5:50:00 |     0     0     1     0 |
+| TRX/USDT |      1 |         -18.17 |         -18.17 |            -3.877 |          -0.39 | 7 days, 10:35:00 |     0     0     1     0 |
+| XRP/USDT |      1 |         -20.79 |         -20.79 |            -4.420 |          -0.44 | 7 days, 15:40:00 |     0     0     1     0 |
+| XLM/USDT |      1 |         -21.82 |         -21.82 |            -4.648 |          -0.46 | 7 days, 14:25:00 |     0     0     1     0 |
+|    TOTAL |     10 |         -16.37 |        -163.70 |           -34.985 |          -3.50 | 9 days, 21:38:00 |     0     0    10     0 |
+================== SUMMARY METRICS ==================
+| Metric                      | Value               |
+|-----------------------------+---------------------|
+| Backtesting from            | 2017-08-17 05:15:00 |
+| Backtesting to              | 2019-01-01 00:00:00 |
+| Max open trades             | 10                  |
+|                             |                     |
+| Total/Daily Avg Trades      | 2301 / 4.59         |
+| Starting balance            | 1000 USDT           |
+| Final balance               | 183.343 USDT        |
+| Absolute profit             | -816.657 USDT       |
+| Total profit %              | -81.67%             |
+| CAGR %                      | -70.94%             |
+| Profit factor               | 0.73                |
+| Trades per day              | 4.59                |
+| Avg. daily profit %         | -0.16%              |
+| Avg. stake amount           | 80.27 USDT          |
+| Total trade volume          | 184702.281 USDT     |
+|                             |                     |
+| Best Pair                   | BNB/USDT 106.09%    |
+| Worst Pair                  | LTC/USDT -224.27%   |
+| Best trade                  | BNB/USDT 14.29%     |
+| Worst trade                 | ETH/USDT -34.83%    |
+| Best day                    | 77.143 USDT         |
+| Worst day                   | -358.225 USDT       |
+| Days win/draw/lose          | 212 / 238 / 53      |
+| Avg. Duration Winners       | 2:22:00             |
+| Avg. Duration Loser         | 14 days, 13:45:00   |
+| Rejected Entry signals      | 208786              |
+| Entry/Exit Timeouts         | 0 / 0               |
+|                             |                     |
+| Min balance                 | 175.843 USDT        |
+| Max balance                 | 1579.8 USDT         |
+| Max % of account underwater | 88.87%              |
+| Absolute Drawdown (Account) | 88.87%              |
+| Absolute Drawdown           | 1403.957 USDT       |
+| Drawdown high               | 579.8 USDT          |
+| Drawdown low                | -824.157 USDT       |
+| Drawdown Start              | 2018-01-15 20:15:00 |
+| Drawdown End                | 2018-12-07 17:35:00 |
+| Market change               | -43.89%             |
+=====================================================
+
+2022-10-08 18:57:49,346 - freqtrade.exchange.exchange - INFO - Closing async ccxt session.
+(.env)
