@@ -1,15 +1,11 @@
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$                                               $$$
-$$$                   WARNING:                    $$$
-$$$                                               $$$
-$$$ ALL CONTENT HAS BEEN MOVED TO MY NEW WEBSITE! $$$
-$$$                                               $$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+WARNING: All content has been moved to:
 
 # [dutchalgotrading.com](dutchalgotrading.com)
 
-All blog posts containing the video's text will also contain all backtest related output and strategy code.
+I am decluttering my stuff...
 
-Now I have all stuff on one single place.
+Now all blog posts containing the video's text will also contain all backtest related output and strategy code.
+
+Stuff on one single place, which makes creating new content even more efficient :-)
 
 See you on [dutchalgotrading.com](dutchalgotrading.com).

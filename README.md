@@ -1,6 +1,6 @@
 WARNING: All content has been moved to:
 
-# [dutchalgotrading.com](dutchalgotrading.com)
+# [https://www.dutchalgotrading.com/](https://www.dutchalgotrading.com/)
 
 I am decluttering my stuff...
 
